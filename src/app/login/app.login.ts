@@ -22,7 +22,7 @@ export class LoginComponent {
   // Function to update the output
   checkPass(): void {
     console.log(this.userInput); // Optional: Log the input value
-    if (this.userInput == "Bax7485") {
+    if (this.userInput == "default") {
       this.message = "Correct Password!"
       this.router.navigate(['/home']);
     }

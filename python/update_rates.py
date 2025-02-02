@@ -1,19 +1,23 @@
 import re, requests
 import psycopg2
 import time
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 connection = psycopg2.connect(
-    database="forex",
-    user="postgres",
-    password="Fb842638",
-    host="localhost",
-    port="5432"
+    database=os.getenv("DATABASE_NAME"),
+    user=os.getenv("DATABASE_USER"),
+    password=os.getenv("DATABASE_PASSWORD"),
+    host=os.getenv("DATABASE_HOST"),
+    port=os.getenv("DATABASE_PORT")
 )
 cursor = connection.cursor()
 
 def postRates():
     country="USD"
-    api_key = 'becb6fe99bfa76b8404acc49'
+    api_key = os.getenv("API_KEY")
     url = f"https://v6.exchangerate-api.com/v6/{api_key}/latest/{country}" #FINAL CODE CHANGES RATE CONVERTER
     try:
         response = requests.get(url)
