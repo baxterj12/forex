@@ -1,0 +1,34 @@
+<style>
+
+</style>
+
+<main class="main">
+  <body>
+    <div class = "mainheader">
+      <h1>Welcome!</h1>
+      <h1>{{currentDate}}</h1>
+      <h1>Current Fee: {{fees}}%</h1>
+      <h1>{{type}}</h1>
+    </div>
+    <h2>Your Balances:</h2>
+    <div *ngIf="balances" class="balances">
+      <div *ngFor="let key of balances | keyvalue">
+        <p *ngIf="key.value != 0">{{ key.key }}: {{ key.value }}</p>
+      </div>
+    </div>
+    <div class = "ratesheader">
+      <h2>Current USD exchange rates:</h2>
+      <button (click)="toggleButton()">Include Fees: {{buttonState ? 'ON' : 'OFF'}}</button>
+    </div>
+    <div *ngIf="buttonState && ratesWithFees" class = "rates">
+      <div *ngFor="let key of ratesWithFees | keyvalue">
+        <p class = "ratepair">{{ key.key }}: {{ key.value }}</p>
+      </div>
+    </div>
+    <div *ngIf="!buttonState && rates" class = "rates">
+      <div *ngFor="let key of rates | keyvalue">
+        <p class = "ratepair">{{ key.key }}: {{ key.value }}</p>
+      </div>
+    </div>
+  </body>
+</main>

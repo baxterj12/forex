@@ -1,0 +1,46 @@
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainheader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.balances{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 85vw;
+    gap: 10px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.ratesheader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.rates {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 85vw;
+    gap: 10px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.ratepair {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
