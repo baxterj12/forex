@@ -5,6 +5,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {ApiService} from './../apiconnect/app.apiconnect';
 
+//work in progress - account functionality to be added later
+
 @Component({
   selector: 'app-root',
   standalone: true,

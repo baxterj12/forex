@@ -1,0 +1,3 @@
+This is a folder containing my Python backend for my current foreign exchange simulation project.
+The backend uses the psycopg2 library to connect to a postgreSQL database containing exchange rate data and currency amounts to make simulated trades.
+My frontend alongside the rest of the project can be found at https://github.com/baxterj12/forex

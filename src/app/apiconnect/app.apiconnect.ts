@@ -15,11 +15,15 @@ export class ApiService {
         return this.http.get(`${this.apiUrl}/trades`);
     }
 
-    getRates() { // Observable<any> {, country: string = 'USD' is aram
-        return this.http.get(`${this.apiUrl}/get_exrates`);
+    getRates(country: string = 'USD') { // Observable<any> {, country: string = 'USD' is param
+        return this.http.get(`${this.apiUrl}/get_exrates?country=${country}`);
     }
 
     getAllBalances() {
         return this.http.get(`${this.apiUrl}/getAllBalances`)
+    }
+
+    makeTrade(from: string, to: string, amount: number, fees: number) {
+        return this.http.get(`${this.apiUrl}/makeTrade?from=${from}&to=${to}&amount=${amount}&fee=${fees}`)
     }
 }
